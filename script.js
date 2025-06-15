@@ -1,20 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('registration-form');
-    const feedbackDiv = document.getElementById('form-feedback');
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('registration-form');
+    var feedbackDiv = document.getElementById('form-feedback');
 
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const usernameInput = document.getElementById('username');
-        const emailInput = document.getElementById('email');
-        const passwordInput = document.getElementById('password');
+        var usernameInput = document.getElementById('username');
+        var emailInput = document.getElementById('email');
+        var passwordInput = document.getElementById('password');
 
-        const username = usernameInput.value.trim();
-        const email = emailInput.value.trim();
-        const password = passwordInput.value.trim();
+        var username = usernameInput.value.trim();
+        var email = emailInput.value.trim();
+        var password = passwordInput.value.trim();
 
-        let isValid = true;
-        const messages = [];
+        var isValid = true;
+        var messages = [];
 
         if (username.length < 3) {
             isValid = false;
